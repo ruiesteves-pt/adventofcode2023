@@ -16,7 +16,6 @@ int main() {
 
     if (calibrationFile.is_open()) {
         while(getline(calibrationFile, calibrationLine)) {
-            //std::cout << calibrationLine << std::endl;
             for (char ch : calibrationLine) {
                 if (isdigit(ch)) {
                     digits.push_back(ch);
