@@ -60,27 +60,11 @@ int main () {
                 }
             }
 
-            /*
-            for (auto j : winningNumbers) {
-                std::cout << j << ' ';
-            }
-
-            std::cout << " | ";
-
-            for (auto j : elfNumbers) {
-                std::cout << j << ' ';
-            }
-            
-            std::cout << std::endl;
-            */
-
             std::set_intersection(winningNumbers.begin(), winningNumbers.end(), elfNumbers.begin(), elfNumbers.end(),std::inserter(intersection, intersection.begin()));
 
             if (!intersection.empty()) {
                 size_t counterResult = intersection.size();
-                //std::cout << "Intersection size = " << counterResult-1 << std::endl;
                 result += pow(2,counterResult-1);
-                //std::cout << result << std::endl;;
             }
             winningNumbers.clear();
             elfNumbers.clear();
